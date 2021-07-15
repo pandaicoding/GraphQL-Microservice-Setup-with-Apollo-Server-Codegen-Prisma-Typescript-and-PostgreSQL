@@ -1,0 +1,11 @@
+overwrite: true
+schema: "http://localhost:4000"
+documents: null
+generates:
+  src/graphql/generated/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+    config:
+      contexType: src/prisma/IPrismaContext#IPrismaContext
+      useIndexSignature: true
